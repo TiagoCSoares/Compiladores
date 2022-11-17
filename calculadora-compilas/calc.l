@@ -5,11 +5,11 @@ void yyerror(char *);
 %}
 
 %%
-[0-9]+    {yylval = atoi(yytext), return NUM;}
+[0-9]+    {yylval = atoi(yytext); return NUM;}
 "+"     return MAIS;
 "-"     return MENOS;
 \n      return ENTER;
 [ \t]   ;
 .       yyerror("simbolo invalido");
 %%
-int yywrap() { return 1; }
+int yywrap() { return 1; };

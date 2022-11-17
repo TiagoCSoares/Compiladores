@@ -1,6 +1,6 @@
-#line 2 "calc.c"
+#line 2 "lexico.c"
 
-#line 4 "calc.c"
+#line 4 "lexico.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -447,8 +447,8 @@ char *yytext;
 #include "calc.h"
 #include <stdlib.h>
 void yyerror(char *);
-#line 451 "calc.c"
-#line 452 "calc.c"
+#line 451 "lexico.c"
+#line 452 "lexico.c"
 
 #define INITIAL 0
 
@@ -667,7 +667,7 @@ YY_DECL
 	{
 #line 7 "calc.l"
 
-#line 671 "calc.c"
+#line 671 "lexico.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -727,7 +727,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 8 "calc.l"
-{yylval = atoi(yytext); return NUM;}
+{yylval = atoi(yytext), return NUM;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
@@ -760,7 +760,7 @@ YY_RULE_SETUP
 #line 14 "calc.l"
 ECHO;
 	YY_BREAK
-#line 764 "calc.c"
+#line 764 "lexico.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1767,4 +1767,4 @@ void yyfree (void * ptr )
 
 #line 14 "calc.l"
 
-int yywrap() { return 1; };
+int yywrap() { return 1; }
